@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noimageindex">
+  <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet,noimageindex">
+  <meta name="bingbot" content="noindex,nofollow,noarchive,nosnippet">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#183942">
+  <title>World map</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./vendor/maplibre-gl.css">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./vendor/maplibre-gl.js"></script>
+  <script defer src="./data/places.js"></script>
+  <script defer src="./data/geography.js"></script>
+  <script defer src="./map-utils.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <main id="map" aria-label="Interactive world map of visited places"></main>
+  <div id="status" role="status" aria-live="polite" hidden></div>
+  <nav id="controls" aria-label="Map controls">
+    <div class="control-group">
+      <button id="zoom-in" aria-label="Zoom in" title="Zoom in"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+      <button id="zoom-out" aria-label="Zoom out" title="Zoom out"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/></svg></button>
+    </div>
+    <div class="control-group">
+      <button id="compass" aria-label="Reset north and flatten map" title="Reset north and flatten map"><svg id="compass-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 5 16-5-3-5 3Z"/><path class="north" d="m12 3 5 16-5-3Z"/></svg></button>
+      <button id="tilt" aria-label="Tilt map" title="Tilt map" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 15 7-9 11 3-7 10Z"/><path d="M4 20h16"/></svg></button>
+      <button id="projection" aria-label="Switch to globe" title="Switch to globe" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg></button>
+      <button id="overview" aria-label="Show all places" title="Show all places"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/><circle cx="12" cy="12" r="2"/></svg></button>
+    </div>
+  </nav>
+  <noscript><p class="notice">Enable JavaScript to explore the map.</p></noscript>
+</body>
+</html>
